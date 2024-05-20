@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>.button {
+    width: 90px;
+    height: 50px;
+    position: relative;
+    font-family: var(--font);
+    color:#ffffff ;
+    font-weight: 600;
+    background-color:#3b82f6 ;
+    border: none;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    transition: all ease 100ms;
+  }
+  
+  button:hover {
+    background-color: #3f71c0;
+  }
+  
+ 
+  
+  button::before {
+    
+    position: absolute;
+    color: #3b82f6;
+    left: 0;
+    top: -14px;
+    right: 0;
+    transition: all ease 300ms;
+    opacity: 0%;
+  }
+  
+  button:focus::before {
+    opacity: 100%;
+    transform: translatey(26px);
+  }
+  
+  .submit {
+    transition: all ease 100ms;
+    opacity: 100%;
+  }
+  
+  button:focus > .submit {
+    opacity: 0%;
+  }
+  .mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .unsend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }</style>
+      
+
+<body>
+    <div class="unsend">
+   <div class="mail"> 
+    <h3>Unread e-mails-</h3><div class="checkbox-wrapper-1">
+        <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+        <label for="example-1">dfjkadsjfjfj@gmail.com</label>
+    </div>
+    <div class="checkbox-wrapper-1">
+        <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+        <label for="example-1">dhjfha@gmail.com</label>
+    </div> 
+    <div class="checkbox-wrapper-1">
+        <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+        <label for="example-1">fkjadkjd@gmail.com</label>
+    </div> 
+    <div class="checkbox-wrapper-1">
+        <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+        <label for="example-1">akjdfkaj@gmail.com</label>
+    </div> 
+    <div class="checkbox-wrapper-1">
+        <input id="example-1" class="substituted" type="checkbox" aria-hidden="true" />
+        <label for="example-1">ajdfkaj@gmail.com</label>
+    </div>  <button class="button" onclick="(myFunction)()">
+        <p class="submit" >Generate responce  </p>
+        
+        </button>
+       
+    </div>  
+<div class="response" id="myDiv">
+    <div>3 Responses generated</div><div>
+      <button class="button" onclick="(myFunction2)()">
+    <p class="submit" >Send e-mail </p>     
+    </button><div class="response" id="myDiv2">
+        E-mail's sent</div></div>
+    </div>  
+      
+</div> 
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDiv");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }};
+        function myFunction2() {
+        var x = document.getElementById("myDiv2");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }};
+</script>
+   
+</html>
+  
